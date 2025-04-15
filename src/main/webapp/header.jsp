@@ -22,7 +22,7 @@
             <center><h2>Online shopping </h2></center>
             <h2><a href=""><%out.println(email); %> <i class='fas fa-user-alt'></i></a></h2>
             <a href="home.jsp">Home<i class="fas fa-university"></i></a>
-            <a href="">My Cart<i class='fas fa-cart-arrow-down'></i></a>
+            <a href="myCart.jsp">My Cart<i class='fas fa-cart-arrow-down'></i></a>
             <a href="">My Orders  <i class='fab fa-elementor'></i></a>
             <a href="">Change Details <i class="fas fa-edit"></i></a>
             <a href="">Message Us <i class='fas fa-comment-alt'></i></a>
