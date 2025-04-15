@@ -31,21 +31,21 @@ if("notPossible".equals(msg))
 if("inc".equals(msg))
 {
 %>
-<h3 class="alert">Quantity  Increased Successfully!</h3>
+<h3 class="alert">Quantity  Increased Successfully !</h3>
 <% }%>
 
 <%
 if("dec".equals(msg))
 {
 %>
-<h3 class="alert">Quantity  Decreased Successfully!</h3>
+<h3 class="alert">Quantity  Decreased Successfully !</h3>
 <% }%>
 
 <%
 if("removed".equals(msg))
 {
 %>
-<h3 class="alert">Product Successfully Removed!</h3>
+<h3 class="alert">Product Successfully Removed !</h3>
 <% }%>
 <table>
 <thead>
