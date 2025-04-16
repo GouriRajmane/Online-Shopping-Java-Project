@@ -5,6 +5,9 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/addressPaymentForOrder-style.css">
+<!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <title>Home</title>
 <script>
@@ -19,6 +22,7 @@ if(window.history.forword(1) != null)
 <% 
 int total=0;
 int sno=0;
+String email = (String) session.getAttribute("email");
 try {
     Connection con = ConnectionProvider.getCon();
    Statement st = con.createStatement();
@@ -33,7 +37,7 @@ try {
 
           <tr>
           <th scope="col"><a href="myCart.jsp"><i class='fas fa-arrow-circle-left'> Back</i></a></th>
-            <th scope="col" style="background-color: yellow;">Total: <i class="fa fa-inr"></i> </th>
+            <th scope="col" style="background-color: yellow;">Total: <i class="fas fa-rupee-sign"></i> </th>
           </tr>
         </thead>
         <thead>
@@ -54,7 +58,7 @@ try {
 		%>
           <tr>
           <% sno=sno+1;%>
-           <td><%out.println(sno); %>></td>
+           <td><%out.println(sno); %></td>
             <td><%=rs.getString(2) %></td>
             <td><%=rs.getString(3) %></td>
             <td><i class="fas fa-rupee-sign"></i><%=rs.getString(4) %></td>
@@ -95,7 +99,7 @@ try {
 </div>
 
 <div class="right-div">
-<h3>Pay online on this btechdays@pay.com</h3>
+<h3>Pay online on this onlineshop@pay.com</h3>
 
 <h3 style="color: red">*If you select online Payment then enter you transaction ID here otherwise leave this blank</h3>
 </div>
