@@ -23,7 +23,7 @@
 			<a href="#">Orders Received <i class="fa-solid fa-box-archive"></i></a>
 			<a href="#">Cancel Orders <i class="fa-solid fa-xmark"></i></a>
 			<a href="#">Delivered Orders <i class="fa-solid fa-truck"></i></a>
-			<a href="../logout.jsp">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+			<a href="../logout.jsp">Logout <i class='fas fa-share-square'></i></a>
 
           </div>
            <br>

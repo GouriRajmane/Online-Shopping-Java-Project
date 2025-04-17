@@ -35,7 +35,7 @@ try {
 %>
   <tr>
     <th scope="col"><a href="myCart.jsp"><i class='fas fa-arrow-circle-left'> Back</i></a></th>
-    <th scope="col" style="background-color: yellow;">Total: <i class="fas fa-rupee-sign"></i> <%= total %></th>
+    <th scope="col" style="background-color: yellow;">Total: <i class="fas fa-rupee-sign"></i> <%out.println(total); %></th>
   </tr>
 </thead>
 <thead>
