@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/changeDetails.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-<title>Message Us</title>
+<title>Change Password</title>
 <style>
 .eye-icon {
   position: absolute;
