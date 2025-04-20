@@ -53,7 +53,7 @@ try
  <input class="input-style" type="text" name="country" value="<%=rs.getString(10)%>" placeholder="Enter Country" required>
 
 <hr>
- <button class="Button" type="submit">Save &nbsp<i class='far fa-arrow-alt-circle-right'></i></button>
+ <button class="button" type="submit">Save &nbsp<i class='far fa-arrow-alt-circle-right'></i></button>
 </form>
 <%
 	}

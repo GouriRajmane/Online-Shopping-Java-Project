@@ -10,10 +10,12 @@ try {
     } else {
         Statement st = con.createStatement();
         
-         String q2= "create table product(id int, name varchar(300), category varchar(300), price int, active varchar(10))";
-         System.out.println(q2); 
-         st.execute(q2);
-         out.println("PRODUCT Table created successfully");
+       	String q4 = "create table users(id int AUTO_INCREMENT,email varchar (100), subject varchar(200), body varchar(800), PRIMARY KEY(id))";
+        System.out.println(q4); 
+        st.execute(q4);
+        out.println("MESSAGE Table created successfully");
+        
+         
         con.close();
     }
 } catch (Exception e) {

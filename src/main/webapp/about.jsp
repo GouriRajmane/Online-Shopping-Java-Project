@@ -10,7 +10,7 @@
 <body>
 <div style="color: white; text-align: center; font-size: 30px;">About <i class="fa fa-address-book"></i></div>
 <div style="background-color: white; padding:35px; font-size: 30px;">
-BTech Days
+online shopping 
 <br>
 Hey everyone!!
 <br>

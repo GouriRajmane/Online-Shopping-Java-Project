@@ -19,7 +19,7 @@
             
             <a href="addNewProduct.jsp">Add New Product <i class="fa-solid fa-square-plus"></i></a>
 			<a href="allProductEditProduct.jsp">All Products & Edit Products <i class="fa-solid fa-pen-to-square"></i></a>
-			<a href="#">Messages Received <i class="fa-solid fa-message"></i></a>
+			<a href="messagesReceived.jsp">Messages Received <i class="fa-solid fa-message"></i></a>
 			<a href="#">Orders Received <i class="fa-solid fa-box-archive"></i></a>
 			<a href="#">Cancel Orders <i class="fa-solid fa-xmark"></i></a>
 			<a href="#">Delivered Orders <i class="fa-solid fa-truck"></i></a>
