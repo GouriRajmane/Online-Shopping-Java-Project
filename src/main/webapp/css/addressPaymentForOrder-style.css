@@ -154,10 +154,12 @@ input[type=text]:focus, textarea:focus,button:focus{
    border-radius: 25px;
 }
 
+
 .button:hover {
-  background-color: #555555;
+  background-color: green; /* More natural green shade */
   color: white;
 }
+
 
 hr
 {

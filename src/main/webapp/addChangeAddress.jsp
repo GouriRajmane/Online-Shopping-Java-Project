@@ -7,6 +7,27 @@
 <link rel="stylesheet" href="css/changeDetails.css">
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <title>Add or Change Adddress</title>
+<style type="text/css">
+.button {
+  background-color: aqua;
+  border: none;
+  color: black;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 30%;
+}
+
+.button:hover {
+  background-color: green; /* More natural green shade */
+  color: white;
+}
+</style>
 </head>
 <body>
 
@@ -32,7 +53,7 @@ try
 	Connection con=ConnectionProvider.getCon();
 	Statement st=con.createStatement();
 	ResultSet rs=st.executeQuery("select * from users where email='"+email+"'");
-	while(rs.next());
+	while(rs.next())
 	{
 %>
 
@@ -53,7 +74,7 @@ try
  <input class="input-style" type="text" name="country" value="<%=rs.getString(10)%>" placeholder="Enter Country" required>
 
 <hr>
- <button class="button" type="submit">Save &nbsp<i class='far fa-arrow-alt-circle-right'></i></button>
+ <button class="button" type="submit">Save &nbsp;<i class='far fa-arrow-alt-circle-right'></i></button>
 </form>
 <%
 	}

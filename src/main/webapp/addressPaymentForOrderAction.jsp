@@ -23,10 +23,7 @@ try
 	ps.setString(5,mobileNumber);
 	ps.setString(6,email);
 	ps.executeUpdate();
-	
-	
-	
-	
+
 	
 	PreparedStatement ps1 = con.prepareStatement("update cart set address=?, city=?, state=?, country=?, mobileNumber=?, orderDate=now(), deliveryDate=DATE_ADD(orderDate, INTERVAL 7 DAY), paymentMethod=?, transactionid=?, status=? where email=? and address is NULL");
 

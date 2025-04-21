@@ -30,24 +30,24 @@ h3
       <%
       try
       {
-    	  Connection con= ConectionProvider.getCon();
+    	  Connection con= ConnectionProvider.getCon();
     	  Statement st= con.createStatement();
-    	  ResultSet rs= st.executeQuery("slect *from message");
+    	  ResultSet rs= st.executeQuery("select *from message");
     	  while(rs.next()) 
     	  {	  
       %>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><%=rs.getString(1) %></td>
+            <td><%=rs.getString(2) %></td>
+            <td><%=rs.getString(3) %></td>
+            <td><%=rs.getString(4) %></td>
           </tr>
          <%
          }
          }
          catch(Exception e)
          {
-        	 System.out.println();
+        	 System.out.println(e);
          }
          %>
         </tbody>

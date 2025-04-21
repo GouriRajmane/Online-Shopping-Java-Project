@@ -77,7 +77,7 @@ catch(Exception e)
    
 <hr>
 </div>
- <button class="button">Save &nbsp<i class='far fa-arrow-alt-circle-right'></i></button>
+ <button class="button">Save &nbsp;<i class='far fa-arrow-alt-circle-right'></i></button>
 </form>
 </body>
 <br><br><br>

@@ -62,7 +62,7 @@ while(rs.next())
 </select>
  <hr>
 </div>
-<button class="button">Save<i class='far fa-arrow-alt-circle-right'></i></button> 
+<button class="button">Save &nbsp;<i class='far fa-arrow-alt-circle-right'></i></button> 
 </form>
 <%
 }
