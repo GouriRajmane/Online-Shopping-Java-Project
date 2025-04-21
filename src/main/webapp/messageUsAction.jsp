@@ -16,6 +16,7 @@ try
 	response.sendRedirect("messageUs.jsp?msg=valid");
 }catch(Exception e)
 {
-	response.sendRedirect("messagUs.jsp?msg=invalid");	
+	System.out.println(e);
+	response.sendRedirect("messageUs.jsp?msg=invalid");	
 }
 %>

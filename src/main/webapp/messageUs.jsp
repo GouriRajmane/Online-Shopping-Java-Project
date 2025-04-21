@@ -7,6 +7,28 @@
 <link rel="stylesheet" href="css/messageUs.css">
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <title>Message Us</title>
+
+<style type="text/css">
+.button {
+  background-color: aqua;
+  border: none;
+  color: black;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 20%;
+}
+
+.button:hover {
+  background-color: green; /* More natural green shade */
+  color: white;
+}
+</style>
 </head>
 <body>
 <div style="color: white; text-align: center; font-size: 30px;">Message Us <i class='fas fa-comment-alt'></i></div>
@@ -28,11 +50,11 @@ if("invalid".equals(msg))
 
 <form action="messageUsAction.jsp" method="post">
 
-<input class="innput-style" type="text" name="subject" placeholder="subject" required>
+<input class="input-style" type="text" name="subject" placeholder="subject" required>
 <hr>
 <textarea class="input-style" name="body" placeholder="Enter your Message" required></textarea>
 <hr>
-<button class="button" type="submit">Send &nbsp <i class='far fa-arrow-alt-circle-right'></i></button>
+<button class="button" type="submit">Send &nbsp;<i class='far fa-arrow-alt-circle-right'></i></button>
 </form>
 
 <br><br><br>
