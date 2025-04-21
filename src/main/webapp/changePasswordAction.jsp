@@ -9,22 +9,19 @@ String confirmPassword = request.getParameter("confirmPassword");
 if (!confirmPassword.equals(newPassword)) {
 	response.sendRedirect("changePassword.jsp?msg=notMatch");
 } else {
-	int check = 0;
 	try {
 		Connection con = ConnectionProvider.getCon();
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery("select * from users where email='" + email + "' and password='" + oldPassword + "'");
-		
+
 		if (rs.next()) {
-			check = 1;
-			// Use a new statement for the update
+			// Valid old password
 			Statement st2 = con.createStatement();
 			st2.executeUpdate("update users set password='" + newPassword + "' where email='" + email + "'");
 			st2.close();
 			response.sendRedirect("changePassword.jsp?msg=done");
-		}
-		
-		if (check == 0) {
+		} else {
+			// Password mismatch
 			response.sendRedirect("changePassword.jsp?msg=wrong");
 		}
 
@@ -33,7 +30,7 @@ if (!confirmPassword.equals(newPassword)) {
 		con.close();
 
 	} catch (Exception e) {
-		System.out.println(e);
+		System.out.println("Error: " + e);
 		response.sendRedirect("changePassword.jsp?msg=invalid");
 	}
 }

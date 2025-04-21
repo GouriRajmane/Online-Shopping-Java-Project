@@ -8,38 +8,59 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <title>Change Password</title>
+
 <style>
-.eye-icon {
-  position: absolute;
-  right: 10px;
-  top: 38px;
+
+.button {
+  background-color: aqua;
+  border: none;
+  color: black;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
   cursor: pointer;
-}
-.input-wrapper {
-  position: relative;
+  margin-left: 32%;
 }
 
-.input-wrapper {
-  position: relative;
-
+.button:hover {
+  background-color: green; /* More natural green shade */
+  color: white;
 }
 
-.input-style {
-
-  padding: 10px 40px 10px 10px; /* Add padding-right for icon space */
-  box-sizing: border-box;
+hr{
+width: 36%
 }
+  .password-container {
+    position: relative;
+    width: 40%;
+    margin-left: 20%;
+    margin-right:30%
+  }
 
-.input-wrapper i {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #666;
-}
+  .input-style {
+    width: 90%;
+    padding: 12px 40px 12px 20px; /* space for eye icon */
+    box-sizing: border-box;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+  }
 
+  .toggle-password {
+    position: absolute;
+    right: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
 </style>
+
 </head>
 <body>
 <%
@@ -71,49 +92,46 @@ if("invalid".equals(msg))
 <h3 class="alert">Some thing went wrong! Try again!</h3>
 <%} %>
 
+ 
 <form action="changePasswordAction.jsp" method="post">
-
-  <h3>Enter Old Password</h3>
- 
-	 <div class="input-wrapper">
-		  <input class="input-style" type="password" name="oldPassword" id="oldPassword" placeholder="Enter Old Password" required>
-		  <i class="fas fa-eye" id="toggleOld"></i>
-	</div>
-  <h3>Enter New Password</h3>
-	  <div class="input-wrapper">
-	  		<input class="input-style" type="password" name="newPassword" id="newPassword" placeholder="Enter New Password" required>
-	  		<i class="fas fa-eye" id="toggleNew"></i>
-	  </div>
-	  
-  <h3>Enter Confirm Password</h3>
-	 <div class="input-wrapper">
-	  <input class="input-style" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
-	  <i class="fas fa-eye" id="toggleConfirm"></i>
-	</div>
-	 
-
-
-
-
-
- 
+  <h3>Enter Old Password</h3> 
+  <div class="password-container">
+    <input class="input-style" type="password" name="oldPassword" id="oldPassword" placeholder="Enter Old Password" required>
+    <i class="fas fa-eye toggle-password" id="toggleOld"></i>
+  </div>
   <hr>
 
-  <button class="button" type="submit"> Save &nbsp<i class='far fa-arrow-alt-circle-right'></i></button>
+  <h3>Enter New Password</h3>
+  <div class="password-container">
+    <input class="input-style" type="password" name="newPassword" id="newPassword" placeholder="Enter New Password" required>
+    <i class="fas fa-eye toggle-password" id="toggleNew"></i>
+  </div>
+  <hr>
+
+  <h3>Enter Confirm Password</h3>		 
+  <div class="password-container">
+    <input class="input-style" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
+    <i class="fas fa-eye toggle-password" id="toggleConfirm"></i>
+  </div>
+  <hr>
+
+  <button class="button" type="submit"> Save &nbsp;<i class='far fa-arrow-alt-circle-right'></i></button>
 </form>
 
+
 <!-- Font Awesome Eye Toggle Script -->
+
 <script>
-  const togglePassword = (toggleId, inputId) => {
-    const toggle = document.getElementById(toggleId);
+  function togglePassword(iconId, inputId) {
+    const icon = document.getElementById(iconId);
     const input = document.getElementById(inputId);
-    toggle.addEventListener('click', () => {
-      const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
-      input.setAttribute('type', type);
-      toggle.classList.toggle('fa-eye');
-      toggle.classList.toggle('fa-eye-slash');
+    icon.addEventListener('click', () => {
+      const type = input.type === 'password' ? 'text' : 'password';
+      input.type = type;
+      icon.classList.toggle('fa-eye');
+      icon.classList.toggle('fa-eye-slash');
     });
-  };
+  }
 
   togglePassword('toggleOld', 'oldPassword');
   togglePassword('toggleNew', 'newPassword');

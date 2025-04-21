@@ -15,25 +15,25 @@ input[type=text]:focus, textarea:focus,button:focus{
 }
 
 .button {
-  background-color: white; /* Green */
+  background-color: aqua;
   border: none;
   color: black;
   padding: 12px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  margin-left:30%;
-  font-size: 16px;
+  margin-left: 20%;
 }
 
 .button:hover {
-  background-color: #555555;
+  background-color: green; /* More natural green shade */
   color: white;
 }
+
 
 hr
 {
