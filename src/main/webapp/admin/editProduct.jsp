@@ -13,7 +13,12 @@
   color: white;
   margin-left: 2.5%
 }
+.button:hover {
+  background-color: green; /* More natural green shade */
+  color: white;
+}
 </style>
+
 </head>
 <body>
  <h2><a class="back" href="allProductEditProduct.jsp"><i class='fas fa-arrow-circle-left'> Back</i></a></h2>
@@ -40,8 +45,15 @@ while(rs.next())
 </div>
 
 <div class="right-div">
+
 <h3>Enter Category</h3>
-<input class= "input-style" type="text" name="category" value="<%=rs.getString(2) %>" required>
+<%-- <input class= "input-style" type="text" name="category" value="<%=rs.getString(2) %>" required>--%>
+<select class="input-style" name="category" required>
+  <option value="Male" <%= "Male".equals(rs.getString(2)) ? "selected" : "" %>>Male</option>
+  <option value="Female" <%= "Female".equals(rs.getString(2)) ? "selected" : "" %>>Female</option>
+  <option value="Kids" <%= "Kids".equals(rs.getString(2)) ? "selected" : "" %>>Kids</option>
+</select>
+
  
 <hr>
 </div>
@@ -49,6 +61,7 @@ while(rs.next())
 <div class="left-div">
 <h3>Enter Price</h3>
 <input class= "input-style" type="number" name="price" value="<%=rs.getString(3) %>" required>
+
  
 <hr>
 </div>

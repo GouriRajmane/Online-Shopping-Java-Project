@@ -53,7 +53,7 @@
           <td><%=rs.getString(10) %></td>
             <td><%=rs.getString(17) %></td>
             <td><%=rs.getString(3) %></td>
-            <td><i class="fa fa-inr"></i><%=rs.getString(5) %>  </td>
+            <td><i class="fas fa-rupee-sign"></i><%=rs.getString(5) %>  </td>
                 <td><%=rs.getString(6) %></td>
                <td><%=rs.getString(7) %></td>
                 <td><%=rs.getString(8) %></td>

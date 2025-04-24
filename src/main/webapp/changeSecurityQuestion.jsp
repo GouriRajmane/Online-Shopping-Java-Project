@@ -53,7 +53,8 @@ String msg=request.getParameter("msg");
 if("done".equals(msg))
 {
 %>
-<h3 class="alert">Your security Question successfully changed !</h3>
+<h3 style="color: yellow; font-size: 20px; text-align: center; font-weight: bold; margin-top: 15px;">
+    <i class="fas fa-check-circle"></i>Your security Question successfully changed !</h3>
 
 <%} %>
 
@@ -61,7 +62,8 @@ if("done".equals(msg))
 if("wrong".equals(msg))
 {
 %>
-<h3 class="alert">Your Password is wrong!</h3>
+<h3 style="color: red; text-align: center; font-size: 22px; font-weight: bold; margin-top: 10px;">
+      <i class="fas fa-times-circle"></i> Your Password is wrong!</h3>
 
 <%} %>
 

@@ -2,6 +2,9 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/signup-style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <title>Signup</title>
 
 <script>
@@ -46,7 +49,6 @@
   </select>
   
   <input type="text" name="answer" placeholder="Enter your answer." required>
-  <input class="input-style" type="password" name="password" placeholder="Enter Password (For Security)" required>
  <div style="position: relative;">
  	   <input class="input-style" type="password" name="password" id="password" placeholder="Enter Password (For Security)" required>
  	    <span onclick="togglePassword()" style="position: absolute; right: 10px; top: 12px; cursor: pointer;">
@@ -57,23 +59,40 @@
       <h2><a href="login.jsp">Login</a></h2>
   </div>
   <div class='whysign'>
-  <%
-  String msg =request.getParameter("msg");
-  if("valid".equals(msg))
-  {
-  %>
-<h1>Successfully Registered !!!</h1>
-  <%} %>
-  <%
-  if("invalid".equals(msg))
-  {
-  %>
-<h1>Something Went Wrong! Please Try Again</h1>
-  <%} %>
+  
+  <h2 style="text-align: center; font-size: 30px; color: #e74c3c; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+ 	 <i class="fas fa-user-plus" style="margin-right: 8px;"></i> Sign Up Here
+  </h2>
+  
+  
+<%
+  String msg = request.getParameter("msg");
+  if ("valid".equals(msg)) {
+%>
+  <h3 style="color: green; text-align: center; font-size: 22px; font-weight: bold; ">
+    <i class="fas fa-check-circle"></i> Successfully Registered !!!
+  </h3>
+<%
+  } else if ("invalid".equals(msg)) {
+%>
+  <h3 style="color: red; text-align: center; font-size: 22px; font-weight: bold; ">
+    <i class="fas fa-times-circle"></i> Something Went Wrong! Please Try Again
+  </h3>
+<%
+  }
+%>
 
-    <h2>Online Shopping</h2>
-    <p>The Online Shopping System is the application that allows the users to shop online without going to the shops to buy them.</p>
-  </div>
+
+  <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #e67e22; text-align:center; font-size: 35px; margin-top:20px">
+    <i class="fas fa-shopping-bag" style="color: #27ae60;"></i> ShopEase: Your Smart Shopping Hub
+  </h2>
+ <p style="text-align: center; color: #333;">
+    <i class="fas fa-laptop" style="color: #3498db;"></i>
+    Experience the convenience of shopping anytime, anywhere <strong>ShopEase</strong> lets you browse, choose, and buy without ever stepping out!
+  </p> 
+
+ </div>
+
 </div>
 
 <script>

@@ -38,14 +38,16 @@ String msg=request.getParameter("msg");
 if("valid".equals(msg))
 {
 %>
-<h3 style="text-align:center; color:yellow;">Message successfully sent. Our team will contact you soon!</h3>
+<h3 style="color: yellow; font-size: 20px; text-align: center; font-weight: bold; ">
+    <i class="fas fa-check-circle"></i>Message successfully sent. Our team will contact you soon!</h3>
 <%} %>
 
 <%
 if("invalid".equals(msg))
 {
 %>
-<h3 style="text-align:center;">Some thing Went Wrong! Try Again!</h3>
+<h3 style="color: red; text-align: center; font-size: 22px; font-weight: bold; ">
+      <i class="fas fa-times-circle"></i>Some thing Went Wrong! Try Again!</h3>
 <%} %>
 
 <form action="messageUsAction.jsp" method="post">

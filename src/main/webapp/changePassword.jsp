@@ -68,29 +68,34 @@ String msg=request.getParameter("msg");
 if("notMatch".equals(msg))
 {
 %>
-<h3 class="alert">New password and Confirm password does not match!</h3>
+<h3 style="color: red; text-align: center; font-size: 22px; font-weight: bold; margin-top: 10px;">
+	<i class="fas fa-times-circle"></i> New password and Confirm password does not match!</h3>
 <%} %>
 
 <%
 if("wrong".equals(msg))
 {
 %>
-<h3 class="alert">Your old Password is wrong!</h3>
+<h3 style="color: red; text-align: center; font-size: 22px; font-weight: bold; margin-top: 10px;">
+	<i class="fas fa-times-circle"></i> Your old Password is wrong!</h3>
 <%} %>
 
 <%
 if("done".equals(msg))
 {
 %>
-<h3 class="alert">Your Password changed successfully!</h3>
+<h3 style="color: yellow; font-size: 20px; text-align: center; font-weight: bold; margin-top: 15px;">
+    <i class="fas fa-check-circle"></i>Your Password changed successfully!</h3>
 <%} %>
 
 <%
 if("invalid".equals(msg))
 {
 %>
-<h3 class="alert">Some thing went wrong! Try again!</h3>
-<%} %>
+	<h3 style="color: red; text-align: center; font-size: 22px; font-weight: bold; margin-top: 10px;">
+      <i class="fas fa-times-circle"></i> Something Went Wrong! Try Again!
+    </h3>
+    <%} %>
 
  
 <form action="changePasswordAction.jsp" method="post">

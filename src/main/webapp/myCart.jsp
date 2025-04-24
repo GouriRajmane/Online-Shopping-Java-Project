@@ -20,33 +20,34 @@ h3
 <div style="color: white; text-align: center; font-size: 30px;">My Cart <i class='fas fa-cart-arrow-down'></i></div>
 
 <%
-String msg=request.getParameter("msg");
-if("notPossible".equals(msg))
-{
+String msg = request.getParameter("msg");
+if ("notPossible".equals(msg)) {
 %>
-<h3 class="alert">There is only one Quantity! So click on remove!</h3>
-<% }%>
-
+  <h3 style="text-align: center; font-size: 20px; color: #e74c3c; font-weight: bold;">
+    <i class="fas fa-exclamation-triangle"></i> There is only one quantity! Please click on <strong>Remove</strong>.
+  </h3>
+<% 
+} else if ("inc".equals(msg)) {
+%>
+  <h3 style="text-align: center; font-size: 20px; color: #27ae60; font-weight: bold;">
+    <i class="fas fa-plus-circle"></i> Quantity Increased Successfully!
+  </h3>
 <%
-if("inc".equals(msg))
-{
+} else if ("dec".equals(msg)) {
 %>
-<h3 class="alert">Quantity  Increased Successfully !</h3>
-<% }%>
-
+  <h3 style="text-align: center; font-size: 20px; color: #f39c12; font-weight: bold;">
+    <i class="fas fa-minus-circle"></i> Quantity Decreased Successfully!
+  </h3>
 <%
-if("dec".equals(msg))
-{
+} else if ("removed".equals(msg)) {
 %>
-<h3 class="alert">Quantity  Decreased Successfully !</h3>
-<% }%>
-
+  <h3 style="text-align: center; font-size: 20px; color: #c0392b; font-weight: bold;">
+    <i class="fas fa-trash-alt"></i> Product Successfully Removed!
+  </h3>
 <%
-if("removed".equals(msg))
-{
+}
 %>
-<h3 class="alert">Product Successfully Removed !</h3>
-<% }%>
+
 <table>
 <thead>
 
@@ -82,7 +83,7 @@ try {
   <th scope="col">Category</th>
   <th scope="col"><i class="fas fa-rupee-sign"></i> Price</th>
   <th scope="col">Quantity</th>
-  <th scope="col">Sub Total</th>
+  <th scope="col"> <i class="fas fa-rupee-sign"></i> Sub Total</th>
   <th scope="col">Remove <i class='fas fa-trash-alt'></i></th>
 </tr>
 </thead>

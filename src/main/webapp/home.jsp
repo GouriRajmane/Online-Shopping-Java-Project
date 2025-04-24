@@ -29,27 +29,29 @@ h3
 <div style="color: white; text-align: center; font-size: 30px;">Home <i class="fas fa-university"></i></div>
 
 
-	<%
-	String msg=request.getParameter("msg");
-	if ("added".equals(msg))
-	{
-	%>
-		<h3 class="alert">Product added successfully!</h3>
-	<%}%>
-	
-	<%
-	if ("exist".equals(msg))
-	{
-	%>
-		<h3 class="alert">Product already exist in you cart! Quantity  increased!</h3>
-	<%}%>
-	
-	<%
-	if ("invalid".equals(msg))
-	{
-	%>
-	<h3 class="alert">Something went wrong! Please Try Again!</h3>
-	<%}%>
+<%
+  String msg = request.getParameter("msg");
+  if ("added".equals(msg)) {
+%>
+  <h3 style="color: yellow; font-size: 20px; text-align: center; font-weight: bold; margin-top: 15px;">
+    <i class="fas fa-check-circle"></i> Product added successfully!
+  </h3>
+<%
+  } else if ("exist".equals(msg)) {
+%>
+  <h3 style="color: #f39c12; font-size: 20px; text-align: center; font-weight: bold; margin-top: 15px;">
+    <i class="fas fa-exclamation-triangle"></i> Product already exists in your cart! Quantity increased!
+  </h3>
+<%
+  } else if ("invalid".equals(msg)) {
+%>
+  <h3 style="color: red; font-size: 20px; text-align: center; font-weight: bold; margin-top: 15px;">
+    <i class="fas fa-times-circle"></i> Something went wrong! Please try again!
+  </h3>
+<%
+  }
+%>
+
 
 
 <table>

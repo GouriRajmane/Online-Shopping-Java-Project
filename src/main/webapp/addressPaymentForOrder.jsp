@@ -43,9 +43,9 @@ try {
     <th scope="col">S.No</th>
     <th scope="col">Product Name</th>
     <th scope="col">Category</th>
-    <th scope="col"><i class="fa fa-inr"></i> Price</th>
+    <th scope="col"><i class="fas fa-rupee-sign"></i> Price</th>
     <th scope="col">Quantity</th>
-    <th scope="col">Sub Total</th>
+    <th scope="col"> <i class="fas fa-rupee-sign"></i> Sub Total</th>
   </tr>
 </thead>
 <tbody>
@@ -124,7 +124,7 @@ try {
 
   <div class="right-div">
     <h3 style="color: red">*If you enter a wrong transaction ID, your order can be cancelled!</h3>
-    <button class="button" type="submit">Proceed to Generate Bill & Save &nbsp <i class='far fa-arrow-alt-circle-right'></i></button>
+    <button class="button" type="submit">Proceed to Generate Bill & Save &nbsp;<i class='far fa-arrow-alt-circle-right'></i></button>
     <h3 style="color: red">*Fill the form correctly</h3>
   </div>
 

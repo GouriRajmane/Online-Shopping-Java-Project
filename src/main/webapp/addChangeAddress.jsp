@@ -36,7 +36,9 @@ String msg=request.getParameter("msg");
 if("valid".equals(msg))
 {
 %>
-<h3 class="alert">Address Successfully Updated !</h3>
+<h3 style="color: yellow; font-size: 20px; text-align: center; font-weight: bold; margin-top: 15px;">
+    <i class="fas fa-check-circle"></i> Address Successfully Updated !
+  </h3>
 
 <%} %>
 
@@ -44,8 +46,10 @@ if("valid".equals(msg))
 if("invalid".equals(msg))
 {
 %>
-<h3 class="alert">Some thing Went Wrong! Try Again!</h3>
-<%} %>
+<h3 style="color: red; text-align: center; font-size: 22px; font-weight: bold; margin-top: 10px;">
+      <i class="fas fa-times-circle"></i> Something Went Wrong! Try Again!
+    </h3>
+ <%} %>
 
 <%
 try

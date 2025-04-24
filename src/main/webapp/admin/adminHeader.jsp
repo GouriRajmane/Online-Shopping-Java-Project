@@ -17,7 +17,9 @@
     <div class="topnav sticky">
     <%String email= session.getAttribute("email").toString(); %>
    
-            <center><h2>Online shopping</h2></center>
+  <h2 style="font-size: 30px; color: #e67e22; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align:center">
+    			<i class="fas fa-shopping-bag" style="color: #27ae60;"></i> ShopEase: Your Smart Shopping Hub
+ 		    </h2>
             
             <a href="addNewProduct.jsp">Add New Product <i class="fa-solid fa-square-plus"></i></a>
 			<a href="allProductEditProduct.jsp">All Products & Edit Products <i class="fa-solid fa-pen-to-square"></i></a>

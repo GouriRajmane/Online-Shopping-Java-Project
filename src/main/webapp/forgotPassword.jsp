@@ -65,23 +65,39 @@
   </div>
   <div class='whyforgotPassword'>
   
+  <h2 style="text-align: center; font-size: 30px; color: red; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+ 	 <i class="fas fa-unlock-alt" style="margin-right: 8px;"></i> Forgot Password
+</h2>
+  
+  
   <%
   String msg=request.getParameter("msg");
   if("done".equals(msg))
   {
- %>  
- <h1>Password Changed Successfully!</h1>
+ %>
+ <h3 style="color: green; text-align: center; font-size: 22px; font-weight: bold; ">
+    <i class="fas fa-check-circle"></i> Password Changed Successfully! !!!
+  </h3>  
+
   <%} %>
   
   <%
   if("invalid".equals(msg))
   {
   %>
-   <h1>Something Went Wrong! Try Again !</h1>
+ 	<h3 style="color: red; text-align: center; font-size: 22px; font-weight: bold; ">
+      <i class="fas fa-times-circle"></i> Something Went Wrong! Try Again!
+    </h3>  
    <%} %>	
    
-    <h2>Online Shopping</h2>
-    <p>The Online Shopping System is the application that allows the users to shop online without going to the shops to buy them.</p>
+    <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #e67e22; text-align:center;font-size: 35px; margin-top: 20px;">
+    <i class="fas fa-shopping-bag" style="color: #27ae60;"></i> ShopEase: Your Smart Shopping Hub
+  </h2>
+
+  <p style="text-align: center; color: #333; margin-top: 5px;">
+    <i class="fas fa-laptop" style="color: #3498db;"></i>
+    Experience the convenience of shopping anytime, anywhere <strong>ShopEase</strong> lets you browse, choose, and buy without ever stepping out!
+  </p>
   </div>
 </div>
 

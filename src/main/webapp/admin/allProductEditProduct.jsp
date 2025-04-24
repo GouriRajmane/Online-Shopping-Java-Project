@@ -24,14 +24,18 @@ String msg= request.getParameter("msg");
 if("done".equals(msg))
 {
 %>
-<h3 class="alert">Product Successfully Updated!</h3>
+<h3 style="color: yellow; font-size: 20px; text-align: center; font-weight: bold; margin-top: 15px;">
+    <i class="fas fa-check-circle"></i> Product Successfully Updated!
+  </h3>
+
 <%} %>
 <%
 if("wrong".equals(msg))
 {
 %>
-<h3 class="alert">Some thing went wrong! Try again!</h3>
-<%} %>
+ <h3 style="color: red; font-size: 20px; text-align: center; font-weight: bold; margin-top: 15px;">
+    <i class="fas fa-times-circle"></i> Something went wrong! Please try again!
+  </h3><%} %>
 
 <table>
         <thead>
@@ -39,7 +43,7 @@ if("wrong".equals(msg))
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Category <i class="fas fa-box"></i></th>
-            <th scope="col"><i class="fa fa-inr"></i> Price</th>
+            <th scope="col"><i class="fas fa-rupee-sign"></i> Price</th>
             <th>Status <i class="fas fa-hourglass-half"></i></th>
             <th scope="col">Edit <i class='fas fa-pen-fancy'></i></th>
           </tr>
